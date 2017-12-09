@@ -1,3 +1,16 @@
 page-hello-ionic {
-
+    .footerQueryBar {
+        color: #5a5a5d;
+    }
+    ion-footer ion-input {}
+    ion-card {
+        width: 100%;
+    }
+    ion-card.sender ion-card-content {
+        float: right //direction: rtl;
+    }
+    ion-card.receiver ion-card-content {
+        //direction: ltr;
+        float: left
+    }
 }

@@ -1,11 +1,35 @@
 import { Component } from '@angular/core';
+import { query } from '@angular/core/src/animation/dsl';
+
+//import { NgModule, ErrorHandler } from '@angular/core';
+//import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 @Component({
-  selector: 'page-hello-ionic',
-  templateUrl: 'hello-ionic.html'
+    selector: 'page-hello-ionic',
+    templateUrl: 'hello-ionic.html'
 })
 export class HelloIonicPage {
-  constructor() {
 
-  }
+    //messages:Array<{text:string}>;
+    query:any
+    messages=[
+        {text:"This is first message",class:"sender"},
+        {text:"This is Second message",class:"receiver"},
+        {text:"This is third message",class:"sender"}
+    ]
+
+    constructor() {
+        this.messages=[
+            {text:"This is first message",class:"sender"},
+            {text:"This is Second message",class:"receiver"},
+            {text:"This is third message",class:"sender"}
+        ];
+    }
+    send(){
+        //this.query=query;
+        //console.log("test");
+        this.messages.push({text:this.query,class:"sender"});
+        this.query="";
+
+    }
 }
