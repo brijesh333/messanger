@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Alert Window</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button (click)="presentAlert()">
+        Present Alert
+    </button>
+    <button ion-button (click)="presentConfirm()">
+        Present Confirm
+    </button>
+
+</ion-content>
