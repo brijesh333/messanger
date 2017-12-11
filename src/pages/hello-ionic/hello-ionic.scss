@@ -6,10 +6,10 @@ page-hello-ionic {
     ion-card {
         width: 100%;
     }
-    ion-card.sender ion-card-content {
+    div.sender ion-card-content {
         float: right //direction: rtl;
     }
-    ion-card.receiver ion-card-content {
+    div.receiver ion-card-content {
         //direction: ltr;
         float: left
     }

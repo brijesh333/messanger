@@ -9,11 +9,13 @@
 
 
 <ion-content padding>
+    <p bubbleShadow>cpDefaultTheme Directive Demo</p>
+    <button ion-button (click)="getData()"> Get data</button>
     <ion-avatar item-start>
 
     </ion-avatar>
-    <div>
-        <ion-card *ngFor="let message of messages" class="{{message.class}}">
+    <div *ngFor="let message of messages" class="{{message.class}}">
+        <ion-card>
             <!-- <ion-card *ngFor="let message of messages"> -->
             <ion-card-content>
                 {{message.text}}

@@ -13,12 +13,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+import { HttpModule } from '@angular/http';
+
+import { DataProvider } from '../services/dataProvider'
+
 @Component({
     templateUrl: 'app.html'
 })
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
-    
+
     // make HelloIonicPage the root (or first) page
     rootPage = HelloIonicPage;
     pages: Array<{ title: string, component: any }>;
@@ -27,7 +31,7 @@ export class MyApp {
         public platform: Platform,
         public menu: MenuController,
         public statusBar: StatusBar,
-        public splashScreen: SplashScreen
+        public splashScreen: SplashScreen,        
     ) {
         this.initializeApp();
 

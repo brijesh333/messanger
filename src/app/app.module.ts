@@ -11,33 +11,42 @@ import { AlertPage } from '../pages/alert/alert';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+//import { DataProvider } from '../providers/data/data';
+
+import { HttpModule, Http } from '@angular/http'
+import { DataProvider } from '../services/dataProvider'
+
+import { BubbleShadow } from '../directives/bubble.directive'
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
-    UsersPage,
-    AlertPage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
-    UsersPage,
-    AlertPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    declarations: [
+        MyApp,
+        HelloIonicPage,
+        ItemDetailsPage,
+        ListPage,
+        UsersPage,
+        AlertPage,
+        BubbleShadow
+    ],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(MyApp),
+        HttpModule
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        HelloIonicPage,
+        ItemDetailsPage,
+        ListPage,
+        UsersPage,
+        AlertPage,
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        DataProvider
+    ]
 })
-export class AppModule {}
+export class AppModule { }
