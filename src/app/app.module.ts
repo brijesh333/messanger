@@ -18,6 +18,8 @@ import { DataProvider } from '../services/dataProvider'
 
 import { BubbleShadow } from '../directives/bubble.directive'
 
+import { CardComponent } from '../components/card/card'
+
 @NgModule({
     declarations: [
         MyApp,
@@ -26,7 +28,8 @@ import { BubbleShadow } from '../directives/bubble.directive'
         ListPage,
         UsersPage,
         AlertPage,
-        BubbleShadow
+        BubbleShadow,
+        CardComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,6 +44,7 @@ import { BubbleShadow } from '../directives/bubble.directive'
         ListPage,
         UsersPage,
         AlertPage,
+        CardComponent,
     ],
     providers: [
         StatusBar,

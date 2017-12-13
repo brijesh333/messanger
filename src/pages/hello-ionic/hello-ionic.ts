@@ -8,6 +8,8 @@ import { DataProvider } from '../../services/dataProvider'
 
 import { BubbleShadow } from '../../directives/bubble.directive'
 
+import { CardComponent } from '../../components/card/card'
+
 @Component({
     selector: 'page-hello-ionic',
     templateUrl: 'hello-ionic.html'

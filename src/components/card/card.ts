@@ -16,7 +16,7 @@ export class CardComponent {
 
     constructor() {
         console.log('Hello CardComponent Component');
-        this.text = 'Hello World';
+        this.text = 'This is an injected component';
     }
 
 }
